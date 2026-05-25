@@ -7,7 +7,7 @@ function App() {
   const [grade, setGrade] = useState("");
 
   useEffect(()=> {
-    fetch("http://localhost:3000/api/students")
+    fetch("https://student-msgn-backend-1.onrender.com/api/students")
     .then(res => res.json())
     .then(data => setStudent(data))
     .catch(err => console.error(err))
@@ -17,7 +17,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/students", {
+      const res = await fetch("https://student-msgn-backend-1.onrender.com/api/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
